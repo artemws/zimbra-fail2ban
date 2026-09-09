@@ -1,7 +1,7 @@
 [DEFAULT]
 findtime    = 86400
 logencoding = utf-8
-bantime     = 100h
+bantime     = 8640000
 bantime.increment = true
 bantime.multipliers = 1 4 24 168 2160
 action = iptables-ipset-proto6-allports
@@ -12,7 +12,7 @@ enabled  = true
 filter   = zimbra-smtp
 port     = 25,465,587
 logpath  = /var/log/zimbra.log
-maxretry = 3
+maxretry = 1
  
 # Non-SMTP commands on the submission ports: nothing legitimate does this.
 # Ban on sight.
@@ -31,7 +31,7 @@ filter   = zimbra-cmdinject
 port     = 25,465,587
 logpath  = /var/log/zimbra.log
 maxretry = 1
-bantime  = 180d
+bantime  = 8640000
 bantime.increment = false
  
 # --- Proxy hosts ----------------------------------------------------------
